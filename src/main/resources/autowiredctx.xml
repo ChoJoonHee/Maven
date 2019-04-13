@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+						http://www.springframework.org/schema/beans/spring-beans.xsd
+							http://www.springframework.org/schema/context 
+							http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+
+
+
+<!--  스프리의 자동객체주입인 어노이션을 사용할 수 있도록 지원해주는 기능 -->
+<context:annotation-config/>
+
+<bean id = "docu1" class = "day01.ex05.autowired.Document"/>
+
+<bean id = "printer" class = "day01.ex05.autowired.Printer"/>
+
+<bean id = "printer2" class = "day01.ex05.autowired.Printer2"/>
+
+<bean id = "docu2" class = "day01.ex05.autowired.Document2">
+<qualifier value = "docu2"></qualifier>
+</bean>
+
+<bean id = "docu3" class = "day01.ex05.autowired.Document2"/>
+
+<bean id = "docu4" class = "day01.ex05.autowired.Document2"/>
+
+
+</beans>
